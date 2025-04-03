@@ -10,7 +10,7 @@ const PhishingForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://phishing-simulation-backend.onrender.com/submit', { email, password });
+      const response = await axios.post('https://phishing-simulation-complete.onrender.com/submit', { email, password });
       setMessage(response.data.message);
     } catch (error) {
       setMessage('Error submitting data');
